@@ -1,0 +1,44 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+
+option csharp_namespace = "GrpcServiceApplication";
+
+package production;
+
+
+// The greeting service definition.
+service Productioner {
+  // Sends a greeting
+  rpc CreateProduct (ProductionRequest) returns (ProductionResponse);
+  rpc UpdateProduct (ProductionRequest) returns (ProductionResponse);
+  rpc DeleteProduct (ProductionRequest) returns (ProductionResponse);
+
+  rpc GetProduct (ProductionRequest) returns (ProductionResponse);
+  rpc GetProductByAll(NullRequest) returns (stream ProductionResponse);
+
+  rpc CreateProductBatch(stream ProductionRequest) returns (ProductionResponse);
+
+}
+
+message NullRequest {
+	google.protobuf.StringValue Id = 1;
+}
+
+// The request message containing the user's name.
+message ProductionRequest {
+  google.protobuf.StringValue Id = 1;
+  google.protobuf.StringValue productName = 2;
+  google.protobuf.StringValue originalCountry = 3;
+  google.protobuf.FloatValue price = 4;
+  google.protobuf.Timestamp createdDate = 5;
+}
+
+// The response message containing the greetings.
+message ProductionResponse {
+  google.protobuf.StringValue productName = 1;
+  google.protobuf.StringValue originalCountry = 2;
+  google.protobuf.FloatValue price = 3;
+  google.protobuf.Timestamp createdDate = 4;
+}

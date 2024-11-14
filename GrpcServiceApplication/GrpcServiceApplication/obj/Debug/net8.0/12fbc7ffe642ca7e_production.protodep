@@ -1,0 +1,4 @@
+obj\Debug\net8.0\Protos/Production.cs \
+obj\Debug\net8.0\Protos/ProductionGrpc.cs: C:/Users/Admin/.nuget/packages/grpc.tools/2.67.0/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/Admin/.nuget/packages/grpc.tools/2.67.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/production.proto

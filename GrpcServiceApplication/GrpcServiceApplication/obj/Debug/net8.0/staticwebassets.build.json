@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "rIWlVLzlEN5b6MWTMqAs7zvDNRfJdpEVTIg2LajyM7s=",
+  "Source": "GrpcServiceApplication",
+  "BasePath": "_content/GrpcServiceApplication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
